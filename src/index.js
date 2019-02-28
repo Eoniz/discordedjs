@@ -1,4 +1,4 @@
-import Discord from 'discord.js';
+const Discord = require("discord.js");
 
 class Discorded {
     
@@ -10,7 +10,7 @@ class Discorded {
      */
     constructor(authToken, autoLogin = true, options = null) {
         this._authToken = authToken;
-        this.client = new Discord.Client(options);
+        this.client = new Discord.Client();
 
         this._init(autoLogin);
     }
@@ -37,7 +37,7 @@ class Discorded {
      * Function to log in discord bot
      */
     login() {
-        this.client.login(true);
+        this.client.login(this._authToken);
     }
 }
 
