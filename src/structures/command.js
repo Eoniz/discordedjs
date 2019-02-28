@@ -1,5 +1,4 @@
-import Discord from 'discord.js';
-import Component from './component';
+const Component = require('./component');
 
 /**
  * Abstract Command class. 
@@ -15,6 +14,8 @@ class Command {
     constructor(name, component) {
         this.name = name;
         this.component = component;
+
+        this.component.command = this;
     }
 
     /**

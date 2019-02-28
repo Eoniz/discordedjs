@@ -1,13 +1,10 @@
-import Command from './command';
-
 class Component {
 
     /**
      * Component constructor
-     * @param {Command} command The command associated to this component 
      */
-    constructor(command) {
-        this.command = command;
+    constructor() {
+        this.command = null;
     }
 
     /**
